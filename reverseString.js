@@ -1,3 +1,5 @@
+// 1. Reverse a string
+
 const readline = require('readline');
 
 // Create a new interface for reading data from standard input and writing the standard output
@@ -7,10 +9,10 @@ const read = readline.createInterface({
 });
 
 // Function to reverse a string (using a ternery operator)
-// If the length of the string is less than or equal to 1 (str.length <= 1), then it's returning the string itself
-// If not function calls itself on a smaller portion of the string (str.slice(0, -1)) and adds the last character (str.slice(-1)) to it
-const reverseString = (str) => {
-    return str.length <= 1 ? str : str.slice(-1) + reverseString(str.slice(0, -1));
+// If the length of the string is less than or equal to 1 (string.length <= 1), then it's returning the string itself
+// If not function calls itself on a smaller portion of the string (string.slice(0, -1)) and adds the last character (string.slice(-1)) to it
+const reverseString = (string) => {
+    return string.length <= 1 ? string : string.slice(-1) + reverseString(string.slice(0, -1));
 };
 
 // Get user input
